@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "simple-rc4-py"
+version = "0.1.0"
+description = "🎂🎂🎂 PythonでRC4暗号を実装してみた！"
+authors = ["osawa-koki <koki@osawa.dev>"]
+license = "Apache-2.0"
+readme = "README.md"
+packages = [{include = "simple_rc4"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
