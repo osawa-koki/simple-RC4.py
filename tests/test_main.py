@@ -1,17 +1,18 @@
 import pytest
 
-from app.main import add
+from app.rc4 import decrypt, encrypt
 
 
 @pytest.mark.parametrize(
-    "x, y, expected",
+    "key, message",
     [
-        (1, 2, 3),
-        (2, 3, 5),
-        (3, 4, 7),
-        (4, 5, 9),
-        (5, 6, 11),
+        ("key", "message"),
+        ("hogehoge", "fugafuga"),
+        ("あいうえお", "かきくけこ"),
+        ("🐙🐬🐸", "🦈🦀🐳🦑🦪"),
     ],
 )
-def test_add(x, y, expected):
-    assert add(x, y) == expected
+def test_add(key, message):
+    encrypted = encrypt(message, key)
+    decrypted = decrypt(encrypted, key)
+    assert message == decrypted
