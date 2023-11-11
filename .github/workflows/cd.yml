@@ -21,4 +21,4 @@ jobs:
     - name: Install dependencies
       run: poetry install --no-root
     - name: Run program
-      run: poetry run python ./app/main.py
+      run: poetry run python ./app/main.py --key "keykey" --message "Hello world!!!"
