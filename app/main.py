@@ -1,5 +1,12 @@
-def add(x, y):
-    return x + y
+from rc4 import decrypt, encrypt
 
+key = "key"
+message = "message"
 
-print(add(1, 2))
+encrypted = encrypt(message, key)
+
+print(encrypted)
+
+decrypted = decrypt(encrypted, key)
+
+print(decrypted)
