@@ -2,9 +2,7 @@ import argparse
 
 from rc4 import decrypt, encrypt
 
-parser = argparse.ArgumentParser(
-    description='Encrypt and decrypt messages using RC4.'
-)
+parser = argparse.ArgumentParser(description="Encrypt and decrypt messages using RC4.")
 parser.add_argument("-k", "--key", type=str, help="key")
 parser.add_argument("-m", "--message", type=str, help="message")
 
