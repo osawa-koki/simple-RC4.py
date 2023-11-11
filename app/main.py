@@ -1,6 +1,6 @@
 import argparse
 
-from rc4 import encrypt, decrypt
+from rc4 import decrypt, encrypt
 
 parser = argparse.ArgumentParser(
     description='Encrypt and decrypt messages using RC4.'
